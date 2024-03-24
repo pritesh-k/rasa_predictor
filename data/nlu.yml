@@ -1,0 +1,202 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+
+- intent: affirm
+  examples: |
+    - yes
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - never
+    - don't
+
+- intent: schedule
+  examples: |
+    - schedule an appointment
+    - create an appointment
+    - schedule an appointment for this week
+    - arrange a new appointment
+    - plan a meeting
+    - I need to book a slot
+    - can you help me schedule an appointment?
+    - is it possible to book an appointment?
+    - when are your available slots?
+    - can we schedule a meeting?
+    - I need to create an appointment
+    - set up a meeting
+    - book an appointment
+    - can you help me schedule?
+    - can I book an appointment?
+    - plan for this
+    - set an appointment
+    - create a schedule for this
+    - I want to book a meeting
+    - arrange a new appointment
+
+
+- intent: cancel
+  examples: |
+    - cancel my scheduled appointment
+    - I need to cancel my appointment
+    - remove my booking
+    - delete the appointment
+    - withdraw my reservation
+    - call off the meeting
+    - scrap the scheduled visit
+    - terminate the appointment
+    - I've changed my mind, cancel it
+    - I'd like to cancel the booking
+    - undo the scheduled time
+    - revoke the appointment
+    - discard the set meeting
+    - retract the reservation
+    - nullify the scheduled visit
+    - rescind the booking
+    - reverse the appointment
+    - eliminate the meeting from the schedule
+    - abandon the planned visit
+    - withdraw from the appointment
+    - drop the scheduled time
+
+- intent: reschedule
+  examples: |
+    - reschedule my appointment to a different time
+    - change the scheduled visit time
+    - modify the appointment details
+    - adjust the meeting time
+    - move my appointment to another slot
+    - shift the scheduled visit to a later time
+    - find a new time for the appointment
+    - alter the appointment schedule
+    - choose another time for the visit
+    - select a different slot for the appointment
+    - switch the appointment time
+    - arrange a new time for the visit
+    - update the meeting time
+    - find another slot for the appointment
+    - shift my scheduled visit to a different time
+    - pick a new time for the appointment
+    - move the visit to another slot
+    - reschedule my current appointment
+    - change the timing of my visit
+    - select an alternative time for the appointment
+
+- intent: provide_time
+  examples: |
+    - I am available at [2:00 p.m](time)
+    - Can we schedule it for [4:00 p.m](time)
+    - How about [10:00 a.m](time)
+    - I prefer [3:00 p.m](time) for the appointment
+    - What about [11:00 a.m](time)
+    - I can make it by [10:00 a.m](time)
+    - [2:00 p.m](time) works for me
+    - [4:00 p.m](time) suits me
+    - [11:00 a.m](time) is good
+    - I am flexible, but [10:00 a.m](time) is ideal
+    - [5:00 p.m](time) is perfect
+    - [2:00 pm](time) works for me
+    - [4:00 pm](time) suits me
+    - [11:00 am](time) is good
+
+- intent: provide_name_number
+  examples: |
+    - [John](name) and my phone number is [1234567890](mobile_number).
+    - [Alice](name) is my name, and you can reach me at [9876543210](mobile_number).
+    - It's [Bob](name), and my contact number is [5551234](mobile_number).
+    - [Sachin](name) [9998887777](mobile_number)
+    - Indeed, I am [Rahul](name), and my mobile is [123456789](mobile_number).
+    - Certainly, [Pritesh](name) is my name, and my phone is [12 34567 890](mobile_number).
+    - Sure, [Sarah](name) is who I am, and you can contact me at [987 654 3210](mobile_number).
+    - Absolutely, [Alex](name) is my name, and my number is [555-1234](mobile_number).
+    - It's [Emily](name), and you can dial [999 888 7777](mobile_number).
+    - Call me [David](name), and my mobile is [1234567890](mobile_number).
+    - I go by [Jennifer](name), and you can reach me at [9876543210](mobile_number).
+    - [Michael](name) is who I am, and my phone number is [5551234](mobile_number).
+    - My name is [Jessica](name), and my reachable number is [999 888 7777](mobile_number).
+    - My name is [Daniel Craig](name), and my mobile is [123 4567890](mobile_number).
+    - [Sophia](name) is my name, and you can contact me at [987-654-3210](mobile_number).
+    - [Liam](name) is who I am, and you can dial [555-1234](mobile_number).
+    - [Emma](name) is my name, and my number is [999 8887777](mobile_number).
+    - [Oliver](name) is my name, and you can call me at [123 4 6 7 8 9 0](mobile_number).
+    - [Ava](name) is my name, and feel free to reach me at [987654 3210](mobile_number).
+    - [Lucas](name) is who I am, and I can be contacted at [555 1234](mobile_number).
+    - [Akshay](name) and [222 5313 3454](mobile_number)
+    - [James](name) and [434 5313 1224](mobile_number)
+    - I am [James Bond](name) and my number is [21343414343](mobile_number)
+    - I am [British](name) and my phone number is [12345 6789](mobile_number)
+    - I am [James Bond](name) and my number is [21343414343](mobile_number)
+    - My name is [James Bond](name) and my contact number is [21343414343](mobile_number)
+    - [James Bond](name) here, you can reach me at [213 4341 4343](mobile_number)
+    - I'm [James Bond](name) and my mobile number is [213 43414343](mobile_number)
+    - It's [James Bond](name), contact me at [213 4341 4343](mobile_number)
+    - My number is [21343414343](mobile_number), and I'm [James Bond](name).
+    - Contact me at [21343414343](mobile_number) - [James Bond](name).
+    - [2134341343](mobile_number) is my mobile, and I'm [James Bond](name).
+    - Reach out to [213 4341 4343](mobile_number) and [James Bond](name).
+    - [James Bond](name) [213 43414343](mobile_number) is the way to contact me.
+ 
+
+- intent: repeat
+  examples: |
+    - Please repeat that.
+    - I didn't catch that, can you repeat?
+    - Can you say that again?
+    - Sorry, I missed that. Repeat, please.
+    - What was that? Repeat, please.
+    - I need you to repeat.
+    - One more time, please.
+    - I didn't get you. Repeat, please.
+    - Repeat the last message.
+    - Could you repeat your previous message?
+
+- intent: appointmentDateMonth
+  examples: |
+    - an appointment on [1st](date) [March](month)
+    - create an appointment for [15th](date) [April](month)
+    - appointment this [5th](date) [May](month)
+    - new appointment for [10th](date) [June](month)
+    - appointment on [22nd](date) [July](month)
+    - I need to book a slot on this [3rd](date) [August](month)
+    - Can you help me with an appointment for [12th](date) [September](month)?
+    - Can I book an appointment for [8th](date) [October](month)?
+    - When are your available slots on [17th](date) [November](month)?
+    - Can we arrange on [21st](date) [December](month)?
+    - I need to create an appointment on [26th](date) [February](month)
+    - Set for [20th](date) [January](month)
+    - Book an appointment on [26th](date) [February](month)
+    - Can you help me with this [March 3rd](date)
+    - Can I book an appointment for [April 1st](date)
+    - [1st](date) [March](month)
+    - [15th](date) [April](month)
+    - [5th](date) [May](month)
+    - [5](date) [May](month)
+    - [November](month) [17th](date)
+    - [November](month) [17](date)
+    - [December](month) [21st](date)
+    - [December](month) [21](date)
+    - [February](month) [26th](date)
+    - [January](month) [20th](date)
+    - [Feb](month) [17th](date)
+    - [Aug](month) [17](date)
+    - [Sep](month) [21st](date)
+    - [Dec](month) [21](date)
+    - [Nov](month) [26th](date)
+    - [Jan](month) [20th](date)
+    - [Oct](month) [20th](date)
+    - [17](date) [Jan](month)
+    - [21st](date) [Feb](month)
+    - [21](date) [Dec](month)

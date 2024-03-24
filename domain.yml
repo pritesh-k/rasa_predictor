@@ -1,0 +1,24 @@
+version: "3.1"
+
+intents:
+  - greet
+  - affirm
+  - deny
+  - schedule
+  - cancel
+  - reschedule
+  - provide_time
+  - provide_name_number
+  - repeat
+  - appointmentDateMonth
+
+entities:
+  - time
+  - name
+  - mobile_number
+  - date
+  - month
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

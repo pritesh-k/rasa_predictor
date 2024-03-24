@@ -1,0 +1,43 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+
+- story: user schedules an appointment
+  steps:
+  - intent: schedule
+
+- story: cancel scheduled appointment
+  steps:
+  - intent: cancel
+
+- story: reschedule appointment
+  steps:
+  - intent: reschedule
+
+- story: User selects a time slot
+  steps:
+  - intent: provide_time
+    entities:
+    - type: time
+
+- story: User provides name and number
+  steps:
+  - intent: provide_name_number
+    entities:
+      - type: name
+      - type: mobile_number
+
+- story: User asks to repeat
+  steps:
+  - intent: repeat
+
+- story: User provides date and month
+  steps:
+  - intent: appointmentDateMonth
+    entities:
+      - type: date
+      - type: month
